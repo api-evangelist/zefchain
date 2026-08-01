@@ -1,0 +1,41 @@
+generated: '2026-07-21'
+method: searched
+source:
+- https://github.com/linera-io/linera-protocol/releases
+- https://crates.io/crates/linera-sdk
+name: Linera Protocol Changelog
+scheme: semver
+current_version: 0.15.19
+notes: >-
+  Versions are published as tagged GitHub releases on linera-io/linera-protocol
+  and mirrored to the linera-* crates on crates.io and the @linera npm packages
+  (all at the same 0.15.x line). Release dates are listed on the GitHub releases
+  page; only version numbers and highlights are recorded here to avoid
+  transcription error. Recent-window entries only.
+entries:
+  - version: 0.15.19
+    highlights:
+      - Multi-leader jitter fixes and chain-manager improvements.
+      - Support splitting a Linera block into multiple EVM transactions.
+      - ScyllaDB performance and bridge optimizations.
+  - version: 0.15.17
+    highlights:
+      - EVM-to-Linera fungible bridge and bridge demo.
+      - Prometheus metrics for Wasm bytecode sizes.
+      - New validator endpoint for previous_event_blocks.
+  - version: 0.15.15
+    highlights:
+      - Sparse event-chain support.
+      - Improved GraphQL subscription handling via watch channels.
+  - version: 0.15.14
+    highlights:
+      - Linera protocol verification in Solidity; enhanced bridge testing.
+      - LRU response caching for application GraphQL queries.
+  - version: 0.15.13
+    highlights:
+      - Generic benchmark operation generation.
+      - Pyroscope profile-forwarding observability support.
+  - version: 0.15.12
+    highlights:
+      - Web storage implementation and wallet locking on the Web platform.
+      - serde-reflection tracking of BCS formats for application data.

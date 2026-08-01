@@ -1,0 +1,107 @@
+generated: '2026-07-21'
+method: searched
+source:
+- https://crates.io/search?q=linera
+- https://www.npmjs.com/org/linera
+- https://linera.dev
+name: Linera (Zefchain) Client Libraries
+description: >-
+  First-party client libraries published by Zefchain Labs / linera-io for
+  building applications on the Linera protocol. Rust crates are the primary
+  developer surface (published to crates.io by the linera-io team); a set of
+  scoped @linera npm packages provide the web/browser client and wallet
+  integrations.
+packages:
+  # ---- Rust (crates.io) — first-party, published by linera-io ----
+  - name: linera-sdk
+    registry: crates.io
+    url: https://crates.io/crates/linera-sdk
+    language: rust
+    official: true
+    description: Library to support developing Linera applications in Rust (primary SDK).
+  - name: linera-base
+    registry: crates.io
+    url: https://crates.io/crates/linera-base
+    language: rust
+    official: true
+    description: Base definitions, including cryptography, used by the Linera protocol.
+  - name: linera-views
+    registry: crates.io
+    url: https://crates.io/crates/linera-views
+    language: rust
+    official: true
+    description: A library mapping complex data structures onto a key-value store.
+  - name: linera-views-derive
+    registry: crates.io
+    url: https://crates.io/crates/linera-views-derive
+    language: rust
+    official: true
+    description: Procedural macros for the linera-views crate.
+  - name: linera-sdk-derive
+    registry: crates.io
+    url: https://crates.io/crates/linera-sdk-derive
+    language: rust
+    official: true
+    description: Procedural macros for the linera-sdk crate.
+  - name: linera-execution
+    registry: crates.io
+    url: https://crates.io/crates/linera-execution
+    language: rust
+    official: true
+    description: Persistent data and logic for runtime and execution of smart contracts.
+  - name: linera-chain
+    registry: crates.io
+    url: https://crates.io/crates/linera-chain
+    language: rust
+    official: true
+    description: Persistent data for chains of blocks, certificates, and cross-chain messaging.
+  - name: linera-core
+    registry: crates.io
+    url: https://crates.io/crates/linera-core
+    language: rust
+    official: true
+    description: The core Linera protocol, including client and server logic.
+  - name: linera-rpc
+    registry: crates.io
+    url: https://crates.io/crates/linera-rpc
+    language: rust
+    official: true
+    description: RPC schemas and networking library for the Linera protocol.
+  - name: linera-version
+    registry: crates.io
+    url: https://crates.io/crates/linera-version
+    language: rust
+    official: true
+    description: Crate version management for the Linera protocol.
+  - name: linera-service-graphql-client
+    registry: crates.io
+    url: https://crates.io/crates/linera-service-graphql-client
+    language: rust
+    official: true
+    description: A GraphQL client for the Linera node service.
+  # ---- npm (@linera scope) — first-party, published by linera.io ----
+  - name: "@linera/client"
+    registry: npm
+    url: https://www.npmjs.com/package/@linera/client
+    language: javascript
+    official: true
+    description: Web client for the Linera blockchain (WASM-backed browser client).
+  - name: "@linera/signer"
+    registry: npm
+    url: https://www.npmjs.com/package/@linera/signer
+    language: javascript
+    official: true
+    description: Implementations of the Signer interface for the Linera blockchain.
+  - name: "@linera/metamask"
+    registry: npm
+    url: https://www.npmjs.com/package/@linera/metamask
+    language: javascript
+    official: true
+    description: MetaMask wallet integration for the Linera blockchain.
+  # ---- Community (not first-party) ----
+  - name: linera-react-client
+    registry: npm
+    url: https://www.npmjs.com/package/linera-react-client
+    language: javascript
+    official: false
+    description: Community React client library for Linera (hooks, providers, wallet).

@@ -1,0 +1,32 @@
+# Linera (Zefchain Labs)
+
+> Linera is a decentralized Web3 protocol built by Zefchain Labs for highly
+> scalable, low-latency applications using a "microchain" architecture, where
+> each user or application runs its own lightweight chain. Developers build
+> applications in Rust with the Linera SDK, deploy them to a public Testnet, and
+> expose chain state to web frontends through a GraphQL node service. (Generated
+> by the API Evangelist enrichment pipeline from public sources; not an official
+> llms.txt.)
+
+## Developer Documentation
+- [Linera developer manual](https://linera.dev): protocol overview, getting started, core concepts (microchains, wallets, applications), backend (Rust SDK) and frontend (JavaScript) development.
+- [Getting started](https://linera.dev/developers/getting_started.html): install the CLI, claim a microchain on the Testnet, deploy a first application.
+- [Node service (GraphQL)](https://linera.dev/developers/core_concepts/node_service.html): how a wallet runs a GraphQL service exposing chain state to frontends.
+
+## APIs
+- GraphQL node service: queries, mutations, and subscriptions over microchain state (self-hosted via `linera service`). No REST/OpenAPI surface. Authorization is by cryptographic wallet signature, not OAuth.
+
+## Client Libraries (first-party)
+- Rust: linera-sdk, linera-base, linera-views, linera-execution, linera-chain, linera-core, linera-rpc, linera-service-graphql-client (crates.io).
+- Web/npm: @linera/client, @linera/signer, @linera/metamask.
+
+## CLI
+- `linera` command-line tool: wallet management, local test networks, running the node service, scaffolding/publishing applications.
+
+## Source & Community
+- [GitHub org](https://github.com/linera-io) — main repo linera-io/linera-protocol (Rust, Apache-2.0).
+- Website: https://linera.io ; Linera Markets trading platform is also a Zefchain Labs product.
+
+## Notes for agents
+- Current release line: 0.15.x (pre-1.0); breaking changes may land between minor versions.
+- The developer surface targets a public Testnet; there is no long-term-support production API guarantee.

@@ -1,0 +1,39 @@
+generated: '2026-07-21'
+method: derived
+source:
+- https://linera.dev/developers/core_concepts/node_service.html
+- https://crates.io/crates/linera-service-graphql-client
+name: Linera Standards Conformance
+description: >-
+  Cross-cutting standards posture for the Linera developer surface. Linera does
+  not expose a REST/OpenAPI HTTP API; the node service exposes a GraphQL API
+  over which frontends read and mutate microchain state. Entries are derived
+  from the developer manual and published client crates; absence of a standard
+  is honest data, not a gap to hide.
+conformance:
+  - id: graphql
+    conforms: true
+    evidence: >-
+      The Linera node service exposes a GraphQL API (queries, mutations, and
+      subscriptions) consumed by web frontends; a first-party
+      linera-service-graphql-client crate and @linera/client web client target it.
+  - id: graphql-subscriptions
+    conforms: true
+    evidence: Release notes document GraphQL subscription handling over watch channels.
+  - id: oauth2
+    conforms: false
+    evidence: >-
+      No OAuth2 flow; access to chain state is authorized by cryptographic
+      wallet signatures rather than bearer tokens.
+  - id: oidc
+    conforms: false
+    evidence: No OpenID Connect surface.
+  - id: rfc9457
+    conforms: false
+    evidence: No HTTP problem+json error surface; errors are returned in the GraphQL error envelope.
+  - id: json-api
+    conforms: false
+    evidence: Not a JSON:API REST surface.
+  - id: fapi
+    conforms: false
+    evidence: Not a financial-grade OAuth API.

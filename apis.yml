@@ -1,7 +1,27 @@
 aid: zefchain
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/zefchain.png
 name: Zefchain
-description: Zefchain is a company surfaced as a portfolio company of a16z and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Zefchain Labs is the company behind Linera, a decentralized Web3 protocol
+  designed for highly scalable, low-latency applications using a "microchain"
+  architecture in which each user or application runs its own lightweight chain.
+  Developers build applications in Rust with the open-source Linera SDK, deploy
+  them to a public Testnet, and expose chain state to web frontends through a
+  GraphQL node service. Zefchain also operates Linera Markets, a 24/7 on-chain
+  trading platform. The project (formerly branded Zefchain) is developed in the
+  open at github.com/linera-io under Apache-2.0 and is backed by a16z. This
+  profile was enriched by the API Evangelist pipeline from public sources.
 url: https://raw.githubusercontent.com/api-evangelist/zefchain/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,12 +31,68 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
-apis: []
+- Blockchain
+- Web3
+- Developer Tools
+- GraphQL
+- Rust
+- SDK
+- Decentralized Infrastructure
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 7
+  pass: local-v1
+common:
+- type: DomainSecurity
+  url: security/zefchain-domain-security.yml
+- type: Website
+  url: https://linera.io
+- type: DeveloperPortal
+  url: https://linera.dev
+- type: Documentation
+  url: https://linera.dev
+- type: GettingStarted
+  url: https://linera.dev/developers/getting_started.html
+- type: APIReference
+  url: https://linera.dev/developers/core_concepts/node_service.html
+- type: GitHubOrganization
+  url: https://github.com/linera-io
+- type: SourceCode
+  url: https://github.com/linera-io/linera-protocol
+- type: SDKs
+  url: packages/zefchain-packages.yml
+- type: Packages
+  url: packages/zefchain-packages.yml
+- type: CLI
+  url: cli/zefchain-cli.yml
+- type: ChangeLog
+  url: changelog/zefchain-changelog.yml
+- type: Conformance
+  url: conformance/zefchain-conformance.yml
+- type: Lifecycle
+  url: lifecycle/zefchain-lifecycle.yml
+- type: LLMsTxt
+  url: llms/zefchain-llms.txt
+apis:
+- name: Linera Node Service (GraphQL)
+  description: >-
+    GraphQL API exposed by the Linera node service (run via the linera CLI)
+    that lets web frontends read and mutate the state of the microchains held
+    by a wallet, including GraphQL subscriptions for chain events. Self-hosted;
+    authorized by cryptographic wallet signatures rather than OAuth.
+  humanURL: https://linera.dev/developers/core_concepts/node_service.html
+  baseURL: https://linera.dev
+  properties:
+  - type: GraphQL
+    url: https://linera.dev/developers/core_concepts/node_service.html
+  - type: Documentation
+    url: https://linera.dev

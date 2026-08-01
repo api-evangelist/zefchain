@@ -1,0 +1,36 @@
+generated: '2026-07-21'
+method: searched
+source:
+- https://github.com/linera-io/linera-protocol/releases
+- https://linera.dev
+name: Linera Protocol Lifecycle
+description: >-
+  Versioning and release-lifecycle posture for the Linera protocol and its
+  client libraries. Linera is pre-1.0 open-source infrastructure released under
+  a rolling 0.15.x line; the developer experience is anchored to an evolving
+  public Testnet rather than a long-term-support production API.
+versioning:
+  scheme: semver
+  current_version: 0.15.19
+  channel: pre-1.0 (0.x); breaking changes may land between minor releases
+  release_source: https://github.com/linera-io/linera-protocol/releases
+environments:
+  - name: Testnet
+    purpose: >-
+      Public test network developers claim microchains on (via the faucet) and
+      deploy applications to; the primary target for the current release line.
+  - name: local
+    purpose: Local validator network spun up with the linera CLI for development.
+deprecation:
+  policy_published: false
+  headers:
+    sunset: false
+    deprecation: false
+  notes: >-
+    No formal RFC 8594 Sunset/Deprecation header policy is published; because
+    the protocol is pre-1.0 and Testnet-anchored, compatibility tracks the
+    active release line rather than a documented deprecation window. Yanked
+    linera-alloy* crates on crates.io are the observable deprecation signal.
+status_page:
+  published: false
+  notes: No dedicated public status page identified for the Testnet at time of enrichment.

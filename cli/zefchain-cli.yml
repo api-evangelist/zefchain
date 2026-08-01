@@ -1,0 +1,40 @@
+generated: '2026-07-21'
+method: searched
+source:
+- https://linera.dev/developers/getting_started.html
+- https://github.com/linera-io/linera-protocol
+name: Linera CLI
+binary: linera
+description: >-
+  The `linera` command-line tool is the primary way developers interact with
+  the Linera protocol: it manages the local wallet, claims microchains on the
+  Testnet, deploys and operates applications, and runs the local node service
+  (which exposes a GraphQL API to frontends). The binary is built from the
+  linera-protocol repository / installed via crates.io as documented in the
+  Linera getting-started guide.
+install:
+  - method: source
+    command: git clone https://github.com/linera-io/linera-protocol
+    note: Build from source with cargo; the canonical developer path.
+  - method: cargo
+    note: >-
+      Install from crates.io per the current linera.dev getting-started guide
+      (the exact crate/version tracks the active Testnet).
+command_groups:
+  - name: wallet
+    purpose: Initialize and manage the local Linera wallet and its keys.
+  - name: net
+    purpose: Spin up a local test network of validators for development.
+  - name: service
+    purpose: Run the node service that exposes a GraphQL endpoint for chain state.
+  - name: project
+    purpose: Scaffold, build, and publish Linera applications (Wasm bytecode + app state).
+  - name: faucet / wallet request-chain
+    purpose: Claim a microchain and request tokens from the Testnet faucet.
+key_flows:
+  - Initialize a wallet against a Testnet faucet, then claim a microchain.
+  - Build a Wasm application and publish its bytecode, then create an application instance.
+  - Run `linera service` locally to query and mutate chain state over GraphQL.
+notes: >-
+  Command surface is grounded in the Linera developer manual; consult
+  linera.dev for the exact subcommands and flags for the current release.
