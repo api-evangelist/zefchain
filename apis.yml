@@ -52,6 +52,9 @@ x-enrichment:
   artifacts_added: 7
   pass: local-v1
 common:
+- type: License
+  name: Apache-2.0
+  url: https://github.com/linera-io/linera-protocol/blob/main/LICENSE
 - type: DomainSecurity
   url: security/zefchain-domain-security.yml
 - type: Website
